@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if ! charms.reactive is_state tensorflow.installed 2> /dev/null; then
+    action-set message='not installed yet'
+    action-fail
+    exit
+fi
+
+module_name=$1
+shift
+juju-log 'Running demo module...'
+#exec 5>&1
+#output=$(python3 -m $module_name \"$@\" | tee >(cat - >&5))  # capture + log
+output=$(python3 -m $module_name \"$@\")
+action-set output="$output"

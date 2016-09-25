@@ -1,0 +1,13 @@
+#!/bin/bash
+
+module_name=tensorflow.models.image.mnist.convolutional
+self_test=
+use_fp16=
+if [[ $(action-get self-test) == "true" ]]; then
+    self_test='--self_test'
+fi
+if [[ $(action-get use-fp16) == "true" ]]; then
+    self_test='--use_fp16'
+fi
+
+$CHARM_DIR/actions/demo-model $module_name $self_test $use_fp16

@@ -11,9 +11,9 @@ series: [xenial]
 resources:
   tensorflow-x86_64:
     type: file
-    filename: tensorflow-0.10.0-cp34-cp34m-linux_x86_64.whl
+    filename: tensorflow-0.10.0-cp35-cp35m-linux_x86_64.whl
     description: Python 3 wheel for TensorFlow on x86_64
   tensorflow-x86_64-gpu:
     type: file
-    filename: tensorflow-0.10.0-cp34-cp34m-linux_x86_64.whl
+    filename: tensorflow-0.10.0-cp35-cp35m-linux_x86_64.whl
     description: Python 3 wheel for TensorFlow on x86_64 w/ GPU support

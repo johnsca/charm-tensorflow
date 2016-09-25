@@ -2,3 +2,15 @@ smoke-test:
   description: >
     Verify that the TensorFlow installation is working by running
     a very basic calculation.
+demo-mnist:
+  description: >
+    Run the MNIST demo model.
+  params:
+    self-test:
+      type: boolean
+      default: false
+      description: Execute a short self-test instead of the full demo
+    use-fp16:
+      type: boolean
+      default: false
+      description: Use half floats instead of full floats
