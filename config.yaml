@@ -1,0 +1,5 @@
+options:
+  gpu_support:
+    description: Enable GPU support with Cuda (untested!)
+    type: boolean
+    default: false

@@ -1,0 +1,2 @@
+repo: https://github.com/johnsca/charm-tensorflow
+includes: ['layer:basic']

@@ -1,0 +1,4 @@
+smoke-test:
+  description: >
+    Verify that the TensorFlow installation is working by running
+    a very basic calculation.

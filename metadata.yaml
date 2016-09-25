@@ -1,0 +1,19 @@
+name: tensorflow
+summary: A basic TensorFlow™ environment
+description: |
+  TensorFlow™ is an open source software library for
+  numerical computation using data flow graphs.
+
+  This charm creates a TensorFlow environment suitable
+  for running or even developing TensorFlow applications.
+tags: [bigdata, machine_learning]
+series: [xenial]
+resources:
+  tensorflow-x86_64:
+    type: file
+    filename: tensorflow-0.10.0-cp34-cp34m-linux_x86_64.whl
+    description: Python 3 wheel for TensorFlow on x86_64
+  tensorflow-x86_64-gpu:
+    type: file
+    filename: tensorflow-0.10.0-cp34-cp34m-linux_x86_64.whl
+    description: Python 3 wheel for TensorFlow on x86_64 w/ GPU support

@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+
+def not_installed():
+    import sys
+    import subprocess
+    subprocess.check_call(['action-set', 'message=not installed yet'])
+    subprocess.check_call(['action-fail'])
+    sys.exit()
+
+try:
+    from charms.reactive import is_state
+    if not is_state('tensorflow.installed'):
+        not_installed()
+except ImportError:
+    not_installed()
+else:
+    from charmhelpers.core import hookenv
+    import tensorflow as tf
+
+
+session = tf.Session()
+message = session.run(tf.constant('tensorflow is working'))
+result = session.run(tf.constant(10) + tf.constant(32))
+
+hookenv.action_set({
+    'message': message,
+    'result': result,
+})
